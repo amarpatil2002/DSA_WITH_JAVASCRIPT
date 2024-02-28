@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Traversing and Accessing</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="ind">
+        <button onclick="getData()" >GetData</button>
+    </div>
+    <Script>
+        let nums = [45,5,6,85,7,3,1,0,45,65,75]
+        // Traversing the array
+        for(let i=0;i<nums.length;i++){
+            document.write(`Array index : ${i} and element : ${nums[i]} <br>`)
+        }
+
+        //Accessing the array value
+        function getData() {
+            let index = document.getElementById("ind").value;
+            if(index < nums.length  && index >= 0 && typeof parseInt(index) === "numsber") {
+                alert(`The data is ${nums[index]}`);
+            }else{
+                alert("Enter valid index")
+            }
+        }
+    </Script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Element</title>
+
+    <script>
+     function searchElement(){
+        let data = [10,45,80,74,18,89,6,52,47,18,25]
+        let element = Number(document.getElementById('element').value)
+        let index=[];
+        for(let i = 0; i < data.length; i++){
+            if(data[i] === element){
+               index += i
+            }
+        }
+        console.log(index);
+     }
+    </script>
+
+</head>
+<body>
+    <div>
+        <input type="text" id="element"><br><br>
+        <button onclick="searchElement()" >Search Element</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserting</title>
+    <script>
+        function addNewElement(){
+            let data = [4,7,85,10,25,65,95,78]
+            let position = Number(document.getElementById('position').value);
+            let newElement = Number(document.getElementById('newelemet').value); 
+            console.log(data)
+            for(let i=data.length-1;i>=0;i--){
+                if(i >= position){
+                    data[i+1] = data[i]
+                    if(i === position){
+                        data[i] = newElement
+                    }
+                }
+            }
+            console.log(data);
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <input type="text" placeholder="Enter the position" id="position"><br><br>
+        <input type="text" placeholder="Enter the new elment"  id="newelemet"><br><br>
+        <button onclick="addNewElement()" >Add New Element</button>
+    </div>
+</body>
+</html>
