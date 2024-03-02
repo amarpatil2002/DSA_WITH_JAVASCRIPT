@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Recursion</title>
+</head>
+<body>
+    <script>
+    //    function recursionFun(x){
+    //        console.log(x);
+    //        if(x < 10){
+    //            recursionFun(x+1)
+    //        }
+    //    }
+    //    let data = 0;
+    //    recursionFun(data)
+
+    // 2.Find the factorial using Recursion
+    function factFun(num){
+        let fact = 1;
+        if(num === 0){
+            return 1;
+        }else{
+            return num*factFun(num - 1)  
+        }  
+    }
+    console.log(factFun(5));
+
+    </script>
+</body>
+</html>
