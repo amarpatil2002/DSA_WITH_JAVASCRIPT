@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear Search</title>
+</head>
+<body>
+    <h2>Linear Search</h2>
+    <script>
+        let data = [40,4,8,78,9,5,55,7]
+        let find = 8;
+        let position = undefined;
+        for(let i=0;i<data.length;i++)
+        {
+            if(data[i] == find)
+            {
+                position = i;
+            }
+        }
+
+        console.log(position);
+    </script>
+</body>
+</html>

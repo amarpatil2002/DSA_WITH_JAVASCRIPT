@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Search with Recursion</title>
+</head>
+<body>
+    <h2>Binary Search with Recursion</h2>
+    <script>
+        let data = [1,4,7,10,45];
+        let start = 0;
+        let end = data.length -1;
+        let find = 10;
+        function binarySearch(start , end , find)
+        {
+            if(start <= end)
+            {
+                let mid = Math.floor((start + end) / 2)
+                console.log(mid);
+                if(find == data[mid])
+                {
+                    alert("element found" + mid);
+                }else if(find > data[mid]){
+                    start = mid + 1;
+                    binarySearch(start , end , find)
+                }else if(find < data[mid]){
+                    end = mid - 1;
+                    binarySearch(start ,end , find)
+                }
+            }
+        }
+        binarySearch(start , end , find)
+    </script>
+</body>
+</html>

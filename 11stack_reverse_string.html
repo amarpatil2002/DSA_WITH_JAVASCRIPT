@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let data = []
+        let currentIndex = 0;
+        function push(elem){
+           data[currentIndex++] = elem
+        }
+
+        function pop(){
+
+            let arr = data[currentIndex - 1];
+            currentIndex -= 1;
+            data.length = currentIndex
+            return arr;
+        
+        }
+
+        function reverseStr(item){
+            for(let i=0;i<item.length;i++){
+                push(item[i])
+            }
+            for(let i=0;i<item.length;i++){
+                item[i] = pop()
+                //console.log(pop());
+            }
+        }
+
+        let str = "amarjit"
+        str = str.split("")
+        reverseStr(str)
+        console.log(str.join(""))
+        
+    </script>
+</body>
+</html>

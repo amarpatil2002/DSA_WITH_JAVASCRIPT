@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front and Rear Operations on Queue</title>
+</head>
+<body>
+    <script>
+        let queue = [];
+        let currentSize = queue.length;
+        let maxSize = 5;
+        function enqueue()
+        {
+            let elem = Number(document.getElementById('data').value);
+            if(currentSize >= maxSize)
+            {
+                alert("Queue is already full");
+            }else{
+                queue[currentSize] = elem
+                currentSize += 1;
+            }
+
+            document.getElementById('data').value = ""
+            
+        }
+
+        //remove the element at the beginning of the queue
+        function dequeue()
+        {
+            if(isEmpty())
+            {
+                for(let i=0 ; i<queue.length;i++){
+                    queue[i] = queue[i+1]
+                }
+                currentSize -= 1;
+                queue.length = currentSize;
+            }else{
+                alert("Queue is already empty")
+            }
+        }
+    
+        //Front 
+        function front()
+        {
+            if(isEmpty())
+            {
+                console.log(queue[0]);
+            }else{
+                alert("Queue is empty")
+            }
+        }
+
+         //Rear 
+         function rear()
+         {
+             if(isEmpty())
+             {
+                 console.log(queue[currentSize-1]);
+             }else{
+                 alert("Queue is empty")
+             }
+         }
+       
+        function isEmpty()
+        {
+            if(currentSize > 0)
+            {
+                return true;
+            }else{
+                return false;
+            }
+        }
+       
+
+        function display()
+        {
+            console.log(queue);
+        }
+
+    </script>
+
+    <div>
+        <input type="text" id="data">
+        <button onclick="enqueue()" >Add Element</button><br><br>
+        <button onclick="dequeue()" >Remove Element</button>
+        <button onclick="display()" >Display Element</button><br><br>
+        <button onclick="front()" >Front Element</button>
+        <button onclick="rear()" >Rear Element</button>
+
+    </div>
+</body>
+</html>

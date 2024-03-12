@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add and Remove the element from the Stack</title>
+</head>
+<body>
+    <h2>Add and Remove the element to Stack</h2>
+    <!-- <script>
+        let data =[];
+        let currentSize = data.length;
+        let max = 4;
+        function push(elem)
+        {
+            if(currentSize >= max){
+                alert("Stack is full " + elem)
+            }
+           data[currentSize] = elem;
+           currentSize += 1;
+        }
+
+        function pop()
+        {
+            if(currentSize > 0){
+                currentSize -= 1
+                data.length = currentSize
+            }else{
+                alert("Stcke is already emty")
+            }
+            
+        }
+
+        push(20)
+        push(45)
+        push(80)
+        push(20)
+        pop()
+        //push(45)
+        //push(80)
+        pop()
+        pop()
+        pop()
+        pop()
+        pop()
+        console.log(data);
+    </script> -->
+
+    <script>
+        let data = []
+        let currentSize = data.length
+        function push()
+        {
+            let elem = Number(document.getElementById('elem').value);
+            data[currentSize] = elem;
+            currentSize += 1;
+            document.getElementById('elem').value = " "
+            console.log("Element Added successfully");
+        }
+
+        function pop(){
+             currentSize -= 1;
+             data.length = currentSize;
+             console.log("Element is removed successfully");
+        }
+
+        function display(){
+            console.log(data);
+        }
+        
+    </script>
+
+    <div>
+        <input type="text" id="elem"><br><br>
+        <button onclick="push()" >Add Element</button><br>
+        <button onclick="pop()" >Remove Element</button><br>
+        <button onclick="display()" >Display Element</button><br>
+    </div>
+</body>
+</html>

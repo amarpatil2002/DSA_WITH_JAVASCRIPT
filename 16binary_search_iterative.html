@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Search with Iterative</title>
+</head>
+<body>
+    <h2>Binary Search with Iterative</h2>
+    <script>
+        let data = [4,7,78 ,89 ,100,202,850,980]
+        let start= 0;
+        let end = data.length-1;
+        let find = 850;
+        let position;
+        while(start <= end)
+        {
+            let mid = Math.floor((start + end)/2)
+            if(find == data[mid]){
+                //console.log(mid);
+                position = mid;
+                break;
+            }else if(find > data[mid] ){
+                start = mid + 1;
+            }else if(find < data[mid]){
+                end = mid - 1;
+            }
+        }
+
+        if(position){
+            alert("Element is found")
+            console.log(position);
+        }else{
+            alert("Element is not found")
+        }
+    </script>
+</body>
+</html>

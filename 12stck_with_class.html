@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack With Class </title>
+</head>
+<body>
+    <!-- Stack With Class -->
+    <script>
+        class Stack{
+            data = []
+            currentSize;
+            constructor() 
+            {
+                this.currentSize = this.data.length;
+            }
+
+            push(newItem)
+            {
+                this.data[this.currentSize++] = newItem;
+            }
+
+            pop()
+            {
+                this.currentSize -= 1;
+                this.data.length = this.currentSize;
+            }
+
+            display(){
+                console.log(this.data);
+            }
+        }
+
+        let obj = new Stack()
+        obj.push(18)
+        obj.push(78)
+        obj.push(28)
+        obj.push(98)
+        obj.pop()
+        obj.pop()
+        obj.display()
+    </script>
+
+</body>
+</html>
